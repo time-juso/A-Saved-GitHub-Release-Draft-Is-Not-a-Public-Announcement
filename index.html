@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Distinguish a saved GitHub release draft from a published announcement and verify intended reader access.">
+  <title>A Saved GitHub Release Draft Is Not a Public Announcement</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%225%22%20fill%3D%22%23945947%22%2F%3E%3Cpath%20d%3D%22M8%208h16M8%2016h12M8%2024h16%22%20stroke%3D%22white%22%20stroke-width%3D%223%22%2F%3E%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body><main class="article-shell"><article><h1>A Saved GitHub Release Draft Is Not a Public Announcement</h1>
+<p>Saving a GitHub release draft preserves work for later; it does not establish that the announcement is available to ordinary readers. If you can see a release while signed in as a maintainer but a colleague cannot open it, check its state and the intended audience before sending the same link again. A convincing preview is not a reader-access test.</p>
+<p>Consider a fictional volunteer project preparing a new edition of a community resource handbook. Priya has written release notes and attached a prepared file, then saved the release as a draft so another editor can review it. A workshop organizer asks for the announcement link. Priya should report that the release is awaiting review, not describe the draft as a completed public handoff.</p>
+<figure><img src="assets/closed-curtain.jpg" alt="Small walnut display alcove with its mustard curtain closed" width="1536" height="1024"></figure>
+<h2>Identify what has actually been completed</h2>
+<p>Begin with the smallest accurate statement. The notes may be written, the file may be attached, and an editor may be able to reopen the draft. Those are useful milestones. None answers the separate question of whether the intended readers can access the release and its materials.</p>
+<p>GitHub's release workflow distinguishes Save draft from Publish release. Use that distinction in handoff messages rather than the vague word done. Priya can say that the draft is ready for editorial review and identify the remaining decision. The organizer can then plan around the real state instead of distributing a link that has not been checked for readers.</p>
+<p>Do not infer release publication from the existence of a tag. Releases are based on Git tags, but a tag and a release are distinct records. A tag may already exist while release preparation continues. If someone points to a version label as proof that the announcement is ready, inspect the actual release state instead.</p>
+<p>Keep the scope equally clear when talking about the handbook file. An attachment can be prepared before its content has been approved. A filename that includes a version number is a label, not evidence of editorial acceptance. Priya still needs the designated reviewer to confirm that this is the edition the project intends to distribute.</p>
+<h2>Review from the audience position</h2>
+<p>A maintainer's view can reveal material that another reader cannot see. GitHub's release-listing API, for example, includes draft releases only for users with push access. An authenticated result is therefore not sufficient evidence that a draft is available to the public. The account used for a check matters.</p>
+<p>For a public repository intended for open readership, plan a signed-out browser check after authorized publication. For a private repository, use the intended authorized reader's access instead. Do not change repository visibility merely to make a test succeed. Publication state and repository access are different questions, and both must fit the project's intended audience.</p>
+<p>If a colleague cannot open a link, ask what they were meant to receive before troubleshooting browser settings. Were they invited to review a draft, or were they expecting a public announcement? A review invitation may require project access. A public handoff should not depend on the sender's maintainer session.</p>
+<p>For Priya's project, the immediate response is straightforward: the release remains a draft pending review. There is no reason to have the workshop organizer create an account, request broader permissions, or keep retrying an unverified link just to compensate for an unfinished publication step.</p>
+<h2>Finish the content review before the state change</h2>
+<p>Use the draft period to compare the announcement with what readers will actually receive. Read the release title, the short explanation of changes, and the attached handbook together. If the notes describe a corrected resource category but the file still contains the earlier wording, the release is not ready merely because the draft has saved successfully.</p>
+<p>Check references according to their role. A project source, an external directory, and an individual resource page should not be described as though they carry the same authority. Priya's handbook can include routes for discovering websites while making clear that readers must assess the destinations themselves.</p>
+<p>An additional <a href="https://xn--9l4b62ig6ai9q.net/" rel="noopener noreferrer">사이트모음</a> may serve as one discovery starting point when reviewing possible resource categories. Confirm the final domain and relevant page content before retaining a reference; a discovery page does not certify the handbook, approve its release, or guarantee the links it may contain.</p>
+<p>Record unresolved questions before asking for approval. A reviewer should not have to guess whether a missing attachment is intentional or whether a sentence still describes a proposed change. A short private review note can identify the exact file and the decision needed without adding operational clutter to the public announcement.</p>
+<p>For repositories using immutable releases, complete the asset review before publication. GitHub documents restrictions on changing assets and the associated tag after such a release is published. Do not assume that replacing a mistaken file later will be a routine option. Check the repository's actual release settings and the project's process.</p>
+<h2>Make publication an explicit authorized step</h2>
+<p>Publication should follow the project's approval process, not a request to produce a shareable preview. Priya asks the responsible maintainer to confirm that the reviewed notes and file are the intended release. If the answer is still pending, leaving the release as a draft is the accurate outcome.</p>
+<p>For an authorized maintainer, GitHub's documented browser path begins at the repository's Releases area. The release form provides Save draft for continued work and Publish release when ready to publicize it. Check that you are working on the intended release, especially when several drafts have similar titles.</p>
+<p>Use this handoff sequence around that decision:</p>
+<ol>
+<li>Identify the exact draft and the edition it represents.</li>
+<li>Confirm that the notes and attached file have been reviewed together.</li>
+<li>Obtain the approval required by the project.</li>
+<li>Have an authorized maintainer perform the publication step.</li>
+<li>Test the resulting release from the intended reader's position.</li>
+</ol>
+<p>Treat a pre-release label separately from draft status. A pre-release warns that an edition is not ready for production and may be unstable; it is not a substitute for keeping an announcement unpublished. Choose the state that matches the actual purpose instead of using similar-sounding labels interchangeably.</p>
+<h2>Verify the result before announcing availability</h2>
+<p>After publication, open the resulting reader-facing release page and inspect the title and notes. Follow the expected download route and check the received file. A page can be accessible while still carrying the wrong edition, so the access check should not end at the first successful page load.</p>
+<p>For Priya's handbook, the organizer should be able to identify the edition, understand the relevant change, and obtain the intended document. Ask the organizer to confirm those specific observations if they are part of the handoff. A general reply that the link works gives less information than confirmation of the actual file.</p>
+<p>Keep a brief completion record with the release page, the edition identifier, and the date of the reader check. Avoid recording an editor URL as the finished announcement. The useful record points a future maintainer to what readers were meant to see, not merely to the screen used while preparing it.</p>
+<p>If the reader check fails, report the failure without widening access impulsively. The next step may be to correct a mistaken URL, finish a pending publication action, or resolve intended repository access. It is not automatically necessary to recreate the release, replace the file, or make a private project public.</p>
+<h2>Questions about release drafts and reader access</h2>
+<h3>Does an existing tag prove the release is published</h3>
+<p>No. A tag identifies a point in repository history, while a release adds a separate publication record. Inspect the release itself and check its reader access. Do not use the tag's existence as a replacement for that verification.</p>
+<h3>Is a pre-release the same as a draft</h3>
+<p>No. Pre-release status describes the readiness of an edition; draft status concerns whether the release has been published. A project may publish a preview edition deliberately, but that is still a publication decision requiring the appropriate review and authorization.</p>
+<h3>Should I change permissions when someone cannot open it</h3>
+<p>Not until you understand the intended audience and the release state. A reviewer and a public reader may need different access. Confirm what the person should receive and follow the project's access policy rather than granting broader permissions as a shortcut.</p>
+<p>Priya's announcement is ready to share when the approved release is published and the intended reader can obtain the correct handbook. Until then, calling it a draft gives collaborators the information they need to act without confusion.</p></article></main></body>
+</html>
